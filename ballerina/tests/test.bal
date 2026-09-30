@@ -31,9 +31,9 @@ final Client xeroProjects = check new ({
     httpVersion: isLiveServer ? http:HTTP_2_0 : http:HTTP_1_1
 }, serviceUrl);
 
-const string PROJECT_ID = "254529e0-2d7f-4b5f-a1ae-2b8b3a8d1c01";
-const string TASK_ID = "7c1f2a3b-4d5e-6f70-8192-a3b4c5d6e7f8";
-const string TIME_ENTRY_ID = "9a8b7c6d-5e4f-3a2b-1c0d-e9f8a7b6c5d4";
+final string PROJECT_ID = isLiveServer ? os:getEnv("XERO_PROJECT_ID") : "254529e0-2d7f-4b5f-a1ae-2b8b3a8d1c01";
+final string TASK_ID = isLiveServer ? os:getEnv("XERO_TASK_ID") : "7c1f2a3b-4d5e-6f70-8192-a3b4c5d6e7f8";
+final string TIME_ENTRY_ID = isLiveServer ? os:getEnv("XERO_TIME_ENTRY_ID") : "9a8b7c6d-5e4f-3a2b-1c0d-e9f8a7b6c5d4";
 
 @test:Config {groups: ["live_tests", "mock_tests"]}
 function testListProjects() returns error? {

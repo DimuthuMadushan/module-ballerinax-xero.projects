@@ -52,6 +52,17 @@ public function main() returns error? {
     }
 
     // Step 3: List the users that can be assigned work.
-    projects:ProjectUserList users = check projectsClient->listProjectUsers({xeroTenantId: tenantId});
-    io:println("Project users: ", (users.items ?: []).length());
+    int userCount = 0;
+    int userPage = 1;
+    while true {
+        projects:ProjectUserList userList = check projectsClient->listProjectUsers({xeroTenantId: tenantId},
+            page = userPage, pageSize = pageSize);
+        projects:ProjectUser[] users = userList.items ?: [];
+        userCount += users.length();
+        if users.length() < pageSize {
+            break;
+        }
+        userPage += 1;
+    }
+    io:println("Project users: ", userCount);
 }

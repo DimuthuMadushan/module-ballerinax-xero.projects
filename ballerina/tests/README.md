@@ -10,9 +10,12 @@ To run them against the live Xero Projects API, set:
 export IS_LIVE_SERVER=true
 export XERO_ACCESS_TOKEN=<access-token>
 export XERO_TENANT_ID=<xero-tenant-id>
+export XERO_PROJECT_ID=<project-id>
+export XERO_TASK_ID=<task-id>
+export XERO_TIME_ENTRY_ID=<time-entry-id>
 ```
 
-Mutating tests are skipped against the live server, and the read tests need the fixed project, task and time entry IDs to exist in the organisation.
+Mutating tests are skipped against the live server, and the read tests use the project, task and time entry IDs given in `XERO_PROJECT_ID`, `XERO_TASK_ID` and `XERO_TIME_ENTRY_ID`, which must exist in the organisation.
 
 ## Test scenarios
 
