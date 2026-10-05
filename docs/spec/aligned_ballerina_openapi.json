@@ -1574,10 +1574,10 @@
                         "example": "sidneyallen@xero.com"
                     }
                 },
+                "description": "A user who can be assigned to project work",
                 "externalDocs": {
                     "url": "https://developer.xero.com/documentation/projects/users"
-                },
-                "description": "A user who can be assigned to project work"
+                }
             },
             "Task": {
                 "type": "object",
@@ -1647,10 +1647,10 @@
                         ]
                     }
                 },
+                "description": "A task within a project with charge details",
                 "externalDocs": {
                     "url": "https://developer.xero.com/documentation/projects/projects"
-                },
-                "description": "A task within a project with charge details"
+                }
             },
             "TaskList": {
                 "type": "object",
@@ -1665,10 +1665,10 @@
                         }
                     }
                 },
+                "description": "Paged list of tasks",
                 "externalDocs": {
                     "url": "https://developer.xero.com/documentation/projects/projects"
-                },
-                "description": "Paged list of tasks"
+                }
             },
             "TaskCreateOrUpdate": {
                 "required": [
@@ -1694,10 +1694,10 @@
                         "description": "An estimated time to perform the task"
                     }
                 },
+                "description": "Payload to create or update a task",
                 "externalDocs": {
                     "url": "https://developer.xero.com/documentation/projects/projects"
-                },
-                "description": "Payload to create or update a task"
+                }
             },
             "Amount": {
                 "type": "object",
@@ -1749,10 +1749,10 @@
                         "example": "00000000-0000-0000-0000-000000000000"
                     }
                 },
+                "description": "Payload to create or update a time entry",
                 "externalDocs": {
                     "url": "https://developer.xero.com/documentation/projects/time"
-                },
-                "description": "Payload to create or update a time entry"
+                }
             },
             "ProjectList": {
                 "type": "object",
@@ -1767,10 +1767,10 @@
                         }
                     }
                 },
+                "description": "Paged list of projects",
                 "externalDocs": {
                     "url": "https://developer.xero.com/documentation/projects/projects"
-                },
-                "description": "Paged list of projects"
+                }
             },
             "Error": {
                 "type": "object",
@@ -1784,10 +1784,10 @@
                         "description": "Exception message"
                     }
                 },
+                "description": "Error returned by the Xero Projects API",
                 "externalDocs": {
                     "url": "https://developer.xero.com/documentation/projects/projects-response-codes"
-                },
-                "description": "Error returned by the Xero Projects API"
+                }
             },
             "ProjectCreateOrUpdate": {
                 "required": [
@@ -1822,10 +1822,10 @@
                         "x-is-money": true
                     }
                 },
+                "description": "Payload to create or update a project",
                 "externalDocs": {
                     "url": "https://developer.xero.com/documentation/projects/projects"
-                },
-                "description": "Payload to create or update a project"
+                }
             },
             "CurrencyCode": {
                 "type": "string",
@@ -2088,10 +2088,10 @@
                         "$ref": "#/components/schemas/ProjectStatus"
                     }
                 },
+                "description": "A Xero project with its invoicing and amount details",
                 "externalDocs": {
                     "url": "https://developer.xero.com/documentation/projects/projects"
-                },
-                "description": "A Xero project with its invoicing and amount details"
+                }
             },
             "Pagination": {
                 "properties": {
@@ -2131,10 +2131,10 @@
                         }
                     }
                 },
+                "description": "Paged list of project users",
                 "externalDocs": {
                     "url": "https://developer.xero.com/documentation/projects/users"
-                },
-                "description": "Paged list of project users"
+                }
             },
             "ProjectStatus": {
                 "type": "string",
@@ -2200,10 +2200,10 @@
                         ]
                     }
                 },
+                "description": "A time entry logged against a project task",
                 "externalDocs": {
                     "url": "https://developer.xero.com/documentation/projects/time"
-                },
-                "description": "A time entry logged against a project task"
+                }
             },
             "ChargeType": {
                 "type": "string",
@@ -2227,10 +2227,10 @@
                         }
                     }
                 },
+                "description": "Paged list of time entries",
                 "externalDocs": {
                     "url": "https://developer.xero.com/documentation/projects/time"
-                },
-                "description": "Paged list of time entries"
+                }
             },
             "ProjectPatch": {
                 "required": [
@@ -2242,10 +2242,10 @@
                         "$ref": "#/components/schemas/ProjectStatus"
                     }
                 },
+                "description": "Payload to change the status of a project",
                 "externalDocs": {
                     "url": "https://developer.xero.com/documentation/projects/projects"
-                },
-                "description": "Payload to change the status of a project"
+                }
             }
         },
         "responses": {

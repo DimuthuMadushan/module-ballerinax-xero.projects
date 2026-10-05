@@ -1,6 +1,6 @@
 _Author_:  Dimuthu Madushan \
 _Created_: 2026/09/30 \
-_Updated_: 2026/09/30 \
+_Updated_: 2026/10/05 \
 _Edition_: Swan Lake
 
 # Sanitation for OpenAPI specification
@@ -23,10 +23,11 @@ These changes are done in order to improve the overall usability, and as workaro
 2. Rename the paged wrapper schemas so they read as lists: `Projects` becomes `ProjectList`, `Tasks` becomes `TaskList`,
    `TimeEntries` becomes `TimeEntryList` and `ProjectUsers` becomes `ProjectUserList`.
 
-3. Correct the summary of `PATCH /Projects/{projectId}`, which read "creates a project for the specified contact". It is
-   now "Updates the status of a specific project", matching what the operation does.
+3. Correct the summary of `PATCH /Projects/{projectId}` in the original spec (`docs/spec/openapi.yaml`), which read
+   "creates a project for the specified contact". It is now "Updates the status of a specific project", matching what
+   the operation does.
 
-4. Add descriptions to the schemas that had none (`Amount`, `Error`, `Pagination`, `Project`, `ProjectCreateOrUpdate`,
+4. Add descriptions, in the original spec (`docs/spec/openapi.yaml`), to the schemas that had none (`Amount`, `Error`, `Pagination`, `Project`, `ProjectCreateOrUpdate`,
    `ProjectPatch`, `ProjectUser`, the list wrappers, `Task`, `TaskCreateOrUpdate`, `TimeEntry` and
    `TimeEntryCreateOrUpdate`).
 
@@ -37,4 +38,5 @@ The following command was used to generate the Ballerina client from the OpenAPI
 ```bash
 bal openapi -i docs/spec/aligned_ballerina_openapi.json -o ballerina --mode client --license docs/license.txt --client-methods remote
 ```
+
 Note: The license year is hardcoded to 2024, change if necessary.

@@ -1113,9 +1113,9 @@ components:
           type: string
           description: Email address of the user
           example: sidneyallen@xero.com
+      description: A user who can be assigned to project work
       externalDocs:
         url: https://developer.xero.com/documentation/projects/users
-      description: A user who can be assigned to project work
     Task:
       type: object
       properties:
@@ -1171,9 +1171,9 @@ components:
           - ACTIVE
           - INVOICED
           - LOCKED
+      description: A task within a project with charge details
       externalDocs:
         url: https://developer.xero.com/documentation/projects/projects
-      description: A task within a project with charge details
     TaskList:
       type: object
       properties:
@@ -1183,9 +1183,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Task'
+      description: Paged list of tasks
       externalDocs:
         url: https://developer.xero.com/documentation/projects/projects
-      description: Paged list of tasks
     TaskCreateOrUpdate:
       required:
       - chargeType
@@ -1204,9 +1204,9 @@ components:
         estimateMinutes:
           type: integer
           description: An estimated time to perform the task
+      description: Payload to create or update a task
       externalDocs:
         url: https://developer.xero.com/documentation/projects/projects
-      description: Payload to create or update a task
     Amount:
       type: object
       properties:
@@ -1247,9 +1247,9 @@ components:
           description: Identifier of the task that time entry is logged against
           format: uuid
           example: 00000000-0000-0000-0000-000000000000
+      description: Payload to create or update a time entry
       externalDocs:
         url: https://developer.xero.com/documentation/projects/time
-      description: Payload to create or update a time entry
     ProjectList:
       type: object
       properties:
@@ -1259,9 +1259,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Project'
+      description: Paged list of projects
       externalDocs:
         url: https://developer.xero.com/documentation/projects/projects
-      description: Paged list of projects
     Error:
       type: object
       properties:
@@ -1271,9 +1271,9 @@ components:
         message:
           type: string
           description: Exception message
+      description: Error returned by the Xero Projects API
       externalDocs:
         url: https://developer.xero.com/documentation/projects/projects-response-codes
-      description: Error returned by the Xero Projects API
     ProjectCreateOrUpdate:
       required:
       - name
@@ -1300,9 +1300,9 @@ components:
           format: double
           example: 1.0
           x-is-money: true
+      description: Payload to create or update a project
       externalDocs:
         url: https://developer.xero.com/documentation/projects/projects
-      description: Payload to create or update a project
     CurrencyCode:
       type: string
       description: 3 letter alpha code for the ISO-4217 currency code, e.g. USD, AUD
@@ -1537,9 +1537,9 @@ components:
           example: 0
         status:
           $ref: '#/components/schemas/ProjectStatus'
+      description: A Xero project with its invoicing and amount details
       externalDocs:
         url: https://developer.xero.com/documentation/projects/projects
-      description: A Xero project with its invoicing and amount details
     Pagination:
       properties:
         page:
@@ -1570,9 +1570,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ProjectUser'
+      description: Paged list of project users
       externalDocs:
         url: https://developer.xero.com/documentation/projects/users
-      description: Paged list of project users
     ProjectStatus:
       type: string
       description: Status for project
@@ -1629,9 +1629,9 @@ components:
           - ACTIVE
           - LOCKED
           - INVOICED
+      description: A time entry logged against a project task
       externalDocs:
         url: https://developer.xero.com/documentation/projects/time
-      description: A time entry logged against a project task
     ChargeType:
       type: string
       description: Can be `TIME`, `FIXED` or `NON_CHARGEABLE`, defines how the task will be charged. Use
@@ -1650,9 +1650,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/TimeEntry'
+      description: Paged list of time entries
       externalDocs:
         url: https://developer.xero.com/documentation/projects/time
-      description: Paged list of time entries
     ProjectPatch:
       required:
       - status
@@ -1660,9 +1660,9 @@ components:
       properties:
         status:
           $ref: '#/components/schemas/ProjectStatus'
+      description: Payload to change the status of a project
       externalDocs:
         url: https://developer.xero.com/documentation/projects/projects
-      description: Payload to change the status of a project
   responses:
     400Error:
       description: A failed request due to validation error
